@@ -53,8 +53,8 @@ const thoughtController = {
                 if (!dbUserData) {
                     res.status(404).json({ message: 'No user found with this id!' });
                     return;
-                    .status(400)
-                    .json({message: "Thought created but no user found with this id!"}
+                    //.status(400)
+                   // .json({message: "Thought created but no user found with this id!"}
                 }
                 
                 res.json({message: "Thought successfully created!"});
@@ -109,17 +109,16 @@ const thoughtController = {
             { $push: { reactions: body } },
             { new: true, runValidators: true }
         )
-            .then(dbThoughtData => {
+            .then((dbThoughtData) => {
                 if (!dbThoughtData) {
                     res.status(404).json({ message: 'No thought found with this id!' });
                     return;
                 }
                 res.json(dbThoughtData);
-            }
-            res.json(dbThoughtData);
-        })
-        .catch(err => res.json(err));
+            })       
+        .catch(err => res.status(400).json(err)),
     },
+
 
     // delete reaction
     removeReaction({ params }, res) {
@@ -128,9 +127,15 @@ const thoughtController = {
             { $pull: { reactions: { reactionId: params.reactionId } } },
             { new: true }
         )
-            .then(dbThoughtData => res.json(dbThoughtData))
-            .catch(err => res.json(err));
-    },
+            .then(dbThoughtData) => {
+                if (!dbThoughtData) {
+                res.status(404) .json({ message: 'No thought found with this id!' });
+                    return;
+                }
+                res.json(dbThoughtData);
+            })
+            .catch((err) => res.json(err));
+        },
 };
 
 module.exports = thoughtController;
