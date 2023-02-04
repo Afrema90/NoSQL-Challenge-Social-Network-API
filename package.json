@@ -1,5 +1,25 @@
 {
   "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
     "mongoose": "^6.9.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "nosql-challenge-social-network-api",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Afrema90/NoSQL-Challenge-Social-Network-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Afrema90/NoSQL-Challenge-Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/Afrema90/NoSQL-Challenge-Social-Network-API#readme"
 }
