@@ -40,7 +40,7 @@ const addDateSuffix = date => {
         const dateObj = new Date(timestamp);
         const formattedMonth = months[dateObj.getMonth()];
 
-        const dayOfMonth = dataSuffix
+        const dayOfMonth = dateSuffix
             ? addDateSuffix(dateObj.getDate())
             : dateObj.getDate();
 
