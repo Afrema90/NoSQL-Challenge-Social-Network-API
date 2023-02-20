@@ -30,3 +30,7 @@ Walkthrough Video
 https://drive.google.com/file/d/1KBZu4Zo4lhlSH247qOmpViKC86nkZsyZ/view
 
 https://github.com/Afrema90/NoSQL-Challenge-Social-Network-API
+
+Please feel free to contact me if you need any further information:
+Email:frema90@gmail.com
+Github profile:Afrema90
